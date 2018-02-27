@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title> Receitas Online </title> <!--título da página-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!--correção acentos-->
+<!--FAV ICON-->
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="images/manifest.json">
+<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="images/favicon.ico">
+<meta name="msapplication-config" content="images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!--FAV ICON-->
+<!-- Importação de CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/menu.css" />
+	<link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--design responsivo-->
+</head>
+
+<body> 
+
+<video autoplay loop muted poster="screenshot.jpg" id="video_background">
+	<source src="videos/video_bg.mp4" type="video/mp4">
+</video>
+
+<div class="container-fluid">
+ 
+<div class="row">
+ 
+<div class="col-md-12">
+
+
+<!--MENU-->
+<div class="open"> 
+  <span class="cls"></span> 
+  <span>
+    <ul class="sub-menu ">
+      <li> <a href="index.html">Home</a> </li>
+      <li> <a href="food.html">Pratos</a> </li>
+      <li> <a href="galeria.html">Galeria</a> </li>
+      <li> <a href="animacao.html">Animação</a> </li>
+      <li> <a href="creditos.html">Créditos</a> </li>
+    </ul>
+  </span> 
+  <span class="cls"></span> 
+</div>
+
+<div class="text-center citacao lol">
+		<p>Delicie-se</p>
+		<p class="subtexto">Conheça as nossas saborosas receitas</p>
+</div>
+
+<!--MENU-->
+
+<div class="mapa">
+	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+	<div style='overflow:hidden;height:45em;width:100%;'>
+		<div id='gmap_canvas' style='height:45em;width:100%;'></div>
+	<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+	</div>
+	<script type='text/javascript'>
+	function init_map(){
+		var myOptions={
+				scrollwheel: false,
+				zoom:8,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+		map=new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+		marker=new google.maps.Marker({map: map,position: new google.maps.LatLng(41.158078, -8.628717)});
+		infowindow=new google.maps.InfoWindow({content:'<strong>Você está aqui</strong><br>Porto, Portugal<br>'});
+		google.maps.event.addListener(marker, 'click', function(){
+			infowindow.open(map,marker);});
+			google.maps.event.addListener(map, 'click', function(event){this.setOptions({scrollwheel:true});});
+			google.maps.event.addListener(map, 'mouseout', function(event){this.setOptions({scrollwheel:false});});
+			infowindow.open(map,marker);
+			var LatLng = marker.getPosition();
+			map.setCenter(LatLng);
+	}
+			google.maps.event.addDomListener(window, 'load', init_map);
+	</script>
+	</div>
+	
+<footer>
+    <div class="footer" id="footer">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-2  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3> Redes Sociais </h3>
+                    <ul class="social">
+                        <li> <a href="https://www.facebook.com/" target="_blank"> <i class="fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="https://www.twitter.com" target="_blank"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="https://www.plus.google.com"/" target="_blank"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="https://www.pinterest.com"/ target="_blank"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="https://www.youtube.com"/ target="_blank"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> <a href="index.html">Home</a> </h3>
+                    <ul>
+			<li> <a href="#"> Menu </a> </li>
+                        <li> <a href="#"> Apelo </a> </li>
+                        <li> <a href="#"> Vídeo de Fundo </a> </li>
+                        <li> <a href="#"> GPS </a> </li>
+			            <li> <a href="#"> Rodapé </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> <a href="food.html">Pratos</a> </h3>
+                    <ul>
+			            <li> <a href="#"> Menu </a> </li>
+                        <li> <a href="#"> Texto de Introdução </a> </li>
+                        <li> <a href="#"> Vídeo lateral </a> </li>
+                        <li> <a href="#"> Imagem de fundo </a> </li>
+                        <li> <a href="#"> Rodapé </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> <a href="galeria.html">Galeria</a> </h3>
+                    <ul>
+                        <li> <a href="#"> Menu </a> </li>
+                        <li> <a href="#"> Galeria de Imagens </a> </li>
+                        <li> <a href="#"> Rodapé </a> </li>
+                    </ul>
+                </div>
+                
+				<div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> <a href="animacao.html">ANIMAÇÃO</a> </h3>
+                    <ul>
+                        <li> <a href="#"> Menu </a> </li>
+                        <li> <a href="#"> Animação </a> </li>
+                        <li> <a href="#"> Imagem da Receita </a> </li>
+                        <li> <a href="#"> Rodapé </a> </li>
+                    </ul>
+                </div>
+				
+				<div class="col-lg-2  col-md-2 col-sm-2 col-xs-4">
+                    <h3> <a href="creditos.html">CRÉDITOS</a> </h3>
+                    <ul>
+                        <li> <a href="#"> Menu </a> </li>
+                        <li> <a href="#"> Tabela de Créditos </a> </li>
+                        <li> <a href="#"> Imagens do Mockup </a> </li>
+                        <li> <a href="#"> Rodapé </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © Turma B - 31127 - Bruno - Poupado. Todos os direitos reservados. </p>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
+</div>
+</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function() {
+  $(document).delegate(".open", "click", function(event){
+    $(this).addClass("oppenned");
+    event.stopPropagation();
+  })
+  $(document).delegate("body", "click", function(event) {
+    $(".open").removeClass("oppenned");
+  })
+  $(document).delegate(".cls", "click", function(event){
+    $(".open").removeClass("oppenned");
+    event.stopPropagation();
+  });
+});
+</script>
+
+</body>
+</html>
