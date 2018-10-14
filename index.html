@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,11 +32,10 @@
                 <div id="navbar3" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="toscroll" href="#Main">Main</a></li>
-                        <li><a class="toscroll" href="#Video">Vídeo</a></li>
+                        <li><a class="toscroll" href="#Skill">About me</a></li>
                         <li><a class="toscroll" href="#WebDesign">Web Design</a></li>
+                        <li><a class="toscroll" href="#Video">Vídeo</a></li>
                         <li><a class="toscroll" href="#3D">3D</a></li>
-                        <li><a class="toscroll" href="#Vetorial">Vetorial</a></li>
-                        <li><a class="toscroll" href="#Design">Design</a></li>
                         <li><a class="toscroll" href="#MyWorks">My Works</a></li>
                     </ul>
                 </div>
@@ -53,8 +54,7 @@
                 <div class="col-lg-12">
                     <div class="intro-message wow bounceIn" data-wow-delay="0.3s">
                         <h1 class="">Bruno Poupado</h1><br>
-                        <h3 class="">Student graduating in Comunication Technologies and Multimédia.<br><br>
-                            This is my academic portfólio<br>
+                        <h3 class="">Comunication Technologies and Multimédia<br>
                             
                         </h3>
                         <hr class="intro-divider">
@@ -70,63 +70,183 @@
 
     <!-- Page Content -->
 
+            <!-- Skill -->
+                    <div id="Skill" class="content-section-a">
+                            <div id="aboutMe"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12">
+                                    <h2 class="section-heading wow fadeInLeft " data-wow-delay="0.3s">About me</h2>
+                            <hr class="section-heading-spacer wow jackInTheBox " data-wow-delay="0.8s">
+                            <div class="clearfix"></div>
+                            <p id="aboutMeText" class="lead wow fadeInDown whiteText" data-wow-delay="1.2s">To know more about me, i dare you to press the button...</p>
+                            <p id="aboutMeTextModified" class="lead animated fadeInDown whiteText" data-wow-delay="0.5s">I really love web and all it's components from backend to frontend, design and usability.<br> I also love 3D and motion graphics.</p>
+                            <br>
+                            <ul>
+                            <li><a id ="skillsButton" class="toscroll buttonSkills wow fadeIn" href="#Skill" onclick="move()"data-wow-delay="1.5s">This Button?!</a></li>
+                            </ul>
+                            <br>
+                            <br>
+                                </div>
+                            </div>
+                        </div>
 
+                <div class="container">
+        
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
 
-    <!--VIDEO-->
-    <div id="Video" class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-6">
-
-                    <h2 class="section-heading wow fadeInLeft" data-wow-delay="0.3s">Vídeo</h2>
-                    <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.1s">
-                    <div class="clearfix"></div>
-                    <p class="lead wow fadeInLeft" data-wow-delay="0.5s"><br>Video editing and motion graphics.
-                        Some examples made in academic context.
-                    </p>
-
-                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.2s" src="images/premiere.png" alt="">
-                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1s" src="images/ae.png" alt="">
-                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="0.8s" src="images/ai.png" alt="">
-
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <p class="center-title wow fadeIn" data-wow-delay="0.6s">Vídeo Edition</p>
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <iframe class="embed-responsive wow fadeInDown" data-wow-delay="0.6s" width="560" height="315" src="https://www.youtube.com/embed/jULK1UTJmls?rel=0"
-                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                              <div class="hiding" id="skillBarsHandler" >
+                              <h3 class=" animated rubberBand " data-wow-delay="0.1s">Personal Qualities</h3>
+                              <p class="secondP">Autonomy</p>
+                              <div class="myProgress">
+                              <div id="autonomy" class="myBar">0%</div>
+                              </div>
+                              <br>
+                              <p class="secondP">Responsability</p>
+                              <div class="myProgress">
+                              <div id="responsability" class="myBar"><p>res</p>0%</div>
+                              </div>
+                              <br>
+                              <p class="secondP">Organization</p>
+                              <div class="myProgress">
+                              <div id="organization" class="myBar">0%</div>
+                              </div>
+                              <br>
+                              <p class="secondP">Self-Taught</p>
+                              <div class="myProgress">
+                              <div id="selfT" class="myBar">0%</div>
+                              </div>
+                              </div>
+                              </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                              <div class="hiding" >
+                              <h3 class=" marginTopps animated rubberBand " data-wow-delay="0.1s">Professional Qualities</h3>
+                              <p class="secondP">Web Develop (html, css, js, php, api, mysql, java)</p>
+                              <div class="myProgress">
+                              <div id="webDevelop" class="myBar">0%</div>
+                              </div>
+                              <br>
+                              <p class="secondP">3D (modeling, texturing, rigging, animating, product image)</p>
+                              <div class="myProgress">
+                              <div id="modeling" class="myBar">0%</div>
+                              </div>
+                              <br>
+                              <p class="secondP">Design (UI, UX, Wireframes, Design Gráfico)</p>
+                              <div class="myProgress">
+                              <div id="design" class="myBar">0%</div>
+                              </div>
+                              <br>
+                              <p class="secondP">Sound/Video (motion graphics, edit sound/vídeo)</p>
+                              <div class="myProgress">
+                              <div id="soundVideo" class="myBar">0%</div>
+                              </div>
+                              </div>
+                              </div>
+                        </div>
+                        </div>
                     </div>
-                </div>
+        <!-- Skill Bars -->
+                
+        <script>
 
-            </div>
+            $(document).ready(function () {
 
-        </div>
+                $(".hiding").hide();
+                $(".myProgress").hide();
+                $("#aboutMeTextModified").hide();
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-6">
-                    <p class="center-title wow fadeIn" data-wow-delay="0.6s">Logo Animation</p>
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <iframe class="embed-responsive wow fadeInDown" data-wow-delay="0.6s" width="560" height="315" src="https://www.youtube.com/embed/cKyiHLkygCE?rel=0"
-                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <p class="center-title wow fadeIn" data-wow-delay="0.6s">Simple Animation</p>
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <iframe class="embed-responsive wow fadeInDown" data-wow-delay="0.6s" width="560" height="315" src="https://www.youtube.com/embed/fGjUey1wZOk?rel=0"
-                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </div>
+                $("#skillsButton").click(function () {
+                    $(".myProgress").show();
+                    $(".hiding").show();
 
-            </div>
-        </div>
+                    $(".box").toggleClass("animated");
+                });
+            });
 
-    </div>
+            function move() {
+                $("#skillsButton").prop("onclick", null);
+                $('#skillsButton').text('Thank You :)');
+                $("#aboutMeText").hide();
+                $("#aboutMeTextModified").show();
+                var elem = document.getElementById("autonomy");
+                var elemWidth = 80;
+                var elem2 = document.getElementById("responsability");
+                var elem2Width = 90;
+                var width = 1;
+                var elem3 = document.getElementById("organization");
+                var elem3Width = 90;
+                var webDevelop = document.getElementById("webDevelop");
+                var webDevelopWidth = 80;
+                var modeling = document.getElementById("modeling");
+                var modelingWidth = 80;
+                var design = document.getElementById("design");
+                var designWidth = 60;
+                var soundVideo = document.getElementById("soundVideo");
+                var soundVideoWidth = 60;
+                var selfTaught = document.getElementById("selfT");
+                var selfTaughtWidth = 101;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        $("#skillsButton").removeAttr("href");
+                    } else {
+                        width++;
+                    }
 
-    </div>
-    <!-- /.Vídeo -->
+                    if (width >= elemWidth) {
+                    } else {
+                        elem.style.width = width + '%';
+                        elem.innerHTML = width * 1 + 1 + '%';
+
+                    }
+                    if (width >= elem2Width) {
+                    } else {
+                        elem2.style.width = width + '%';
+                        elem2.innerHTML = width * 1 + 1 + '%';
+
+                    }
+                    if (width >= elem3Width) {
+                    } else {
+                        elem3.style.width = width + '%';
+                        elem3.innerHTML = width * 1 + 1 + '%';
+
+                    }
+                    if (width >= webDevelopWidth) {
+                    } else {
+                        webDevelop.style.width = width + '%';
+                        webDevelop.innerHTML = width * 1 + 1 + '%';
+
+                    }
+                    if (width >= modelingWidth) {
+                    } else {
+                        modeling.style.width = width + '%';
+                        modeling.innerHTML = width * 1 + 1 + '%';
+
+                    }
+                    if (width >= designWidth) {
+                    } else {
+                        design.style.width = width + '%';
+                        design.innerHTML = width * 1 + 1 + '%';
+
+                    }
+                    if (width >= soundVideoWidth) {
+                    } else {
+                        soundVideo.style.width = width + '%';
+                        soundVideo.innerHTML = width * 1 + 1 + '%';
+
+                    }
+                    if (width >= selfTaughtWidth) {
+                    } else {
+                        selfTaught.style.width = width + '%';
+                        selfTaught.innerHTML = width * 1 + '%';
+
+                    }
+                }
+            }
+        </script>
+
 
     <!--WebDesign-->
 
@@ -137,68 +257,106 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-6">
                     <h2 class="section-heading wow fadeInLeft " data-wow-delay="0.3s">Web Design</h2>
-                    <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.1s">
+                    <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.5s">
                     <div class="clearfix"></div>
-                    <p class="lead wow fadeInLeft" data-wow-delay="0.5s">Capable of creating responsive layouts to any device with html, css, bootstrap and some js implementations such as animations.</p>
+                    <p class="lead wow fadeInLeft blueText" data-wow-delay="0.6s">
+                        - FrontEnd
+                    </p>
+                    <p class="lead wow fadeInLeft blueText" data-wow-delay="0.8s">
+                        - BackEnd
+                    </p>
 
                     <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.4s" src="images/html.png" alt="">
                     <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.2s" src="images/css.png" alt="">
                     <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1s" src="images/bootstrap.png" alt="">
                     <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="0.8s" src="images/js.png" alt="">
+                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="0.6s" src="images/php.png" alt="">
+                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.4s" src="images/mySQL.png" alt="">
+                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.2s" src="images/codeigniter.png" alt="">
+                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1s" src="images/ajax.png" alt="">
                     <br>
                     <br>
                     <br>
                 </div>
 
 
-                <div class="col-lg-3 col-sm-3 newteam">
+                <div class="col-lg-6 col-sm-6 newteam">
 
                     <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                        <a class="imglink" href="Websites/ArquiTek/index.html"target="_blank"><img src="images/Arquitek.png" class="img-circle imgfade" alt=""></a>
-                        <h4>Arquitek</h4>
-                        <br>
-                        <p>This site was made in academic context</p>
-
-
+                        <img class="img-responsive wow fadeInRight" id="imagemResponsive" data-wow-delay="1.4s" src="images/responsive.png" alt="">
                     </div>
-
-                </div>
-
-                <div class="col-lg-3 col-sm-3 newteam">
-
-                    <div class=" wow fadeInRight" data-wow-delay="1s">
-                        <a class="imglink" href="Websites/ReceitasOnline/index.html"target="_blank"><img src="images/ReceitasOnline.jpg" class="img-circle imgfade" alt=""></a>
-                        <h4>Receitas Online</h4>
-                        <br>
-                        <p>This site was made in academic context</p>
-
-
                     </div>
-
-                </div>
-
             </div>
-
+            </div>
         </div>
 
 
         <!-- /.WebDesign-->
 
+    <!--VIDEO-->
+    <div id="Video" class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+
+                    <h2 class="section-heading wow fadeInLeft" data-wow-delay="0.3s">Vídeo</h2>
+                    <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.5s">
+                    <div class="clearfix"></div>
+                    <p class="lead wow fadeInLeft whiteText" data-wow-delay="0.6s">
+                        - Vídeo Editing
+                    </p>
+                    <p class="lead wow fadeInLeft whiteText" data-wow-delay="0.8s">
+                        - Motion Graphics
+                    </p>
 
 
+                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.2s" src="images/premiere.png" alt="">
+                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1s" src="images/ae.png" alt="">
+                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="0.8s" src="images/ai.png" alt="">
+
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <!--<p class="center-title wow fadeIn" data-wow-delay="0.6s">Vídeo Edition</p>-->
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive wow fadeInDown" data-wow-delay="0.6s" width="560" height="315" src="https://www.youtube.com/embed/jULK1UTJmls?rel=0"
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+            </div>
+    <!-- /.Vídeo -->
 
         <!-- 3D Modeling -->
 
-<div id="3D" class="content-section-a">
+<div id="3D" class="content-section-b">
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-sm-6">
 
                     <h2 class="section-heading wow fadeInLeft" data-wow-delay="0.3s">3D</h2>
-                    <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.1s">
+                    <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.5s">
                     <div class="clearfix"></div>
-                    <p class="lead wow fadeInLeft" data-wow-delay="0.5s">From modeling to texturing, rigging and animating. Can create product image and arch such interiors, exteriors with V-Ray.</p>
+                    <p class="lead wow fadeInLeft" data-wow-delay="0.6s">
+                        - Modeling
+                    </p>
+                     <p class="lead wow fadeInLeft" data-wow-delay="0.8s">
+                        - Texturing
+                    </p>
+                    <p class="lead wow fadeInLeft" data-wow-delay="1s">
+                        - Rigging
+                    </p>
+                                        <p class="lead wow fadeInLeft" data-wow-delay="1.2s">
+                        - Animating
+
+                    </p>
+                                        <p class="lead wow fadeInLeft" data-wow-delay="1.4s">
+                        - Product Image
+                    </p>
 
                     <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.6s" src="images/3d.png" alt="">
                     <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.4s" src="images/q2.png" alt="">
@@ -209,7 +367,7 @@
 
                 </div>
                 <div class="col-lg-6 col-sm-6">
-                    <p class="center-title wow fadeIn" data-wow-delay="0.6s">Model and Rig</p>
+                    <!--<p class="center-title wow fadeIn" data-wow-delay="0.6s">Model and Rig</p>-->
                     <div class="embed-responsive embed-responsive-4by3">
                         <iframe class="embed-responsive wow fadeInDown" data-wow-delay="0.6s" width="560" height="315" src="https://www.youtube.com/embed/y6VrjfVPVvA?rel=0"
                             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -223,14 +381,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-sm-6">
-                    <p class="center-title wow fadeIn" data-wow-delay="0.6s">Animation and Modeling</p>
+                    <!--<p class="center-title wow fadeIn" data-wow-delay="0.6s">Animation and Modeling</p>-->
                     <div class="embed-responsive embed-responsive-4by3">
                         <iframe class="embed-responsive wow fadeInDown" data-wow-delay="0.6s" width="560" height="315" src="https://www.youtube.com/embed/B2hFcNkzlMI?rel=0"
                             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-6">
-                    <p class="center-title wow fadeIn" data-wow-delay="0.6s">Other Models</p>
+                    <!--<p class="center-title wow fadeIn" data-wow-delay="0.6s">Other Models</p>-->
                     <div class="embed-responsive embed-responsive-4by3">
                         <iframe class="embed-responsive wow fadeInDown" data-wow-delay="0.6s" width="560" height="315" src="https://www.youtube.com/embed/OD7vMQ68Ypc?rel=0"
                             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -239,7 +397,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12  ">
     
                     <div class=" wow fadeInLeft" data-wow-delay="0.8s">
-                            <p class="center-title wow fadeIn" data-wow-delay="0.6s">Arch V-Ray</p>
+                            <!--<p class="center-title wow fadeIn" data-wow-delay="0.6s">Arch V-Ray</p>-->
                          <img class="imagens_vetoriais img-responsive" src="images/dif.png"  alt="">
 
 
@@ -252,7 +410,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 ">
 
                     <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                            <p class="center-title wow fadeIn" data-wow-delay="0.6s">Arch V-Ray</p>
+                            <!--<p class="center-title wow fadeIn" data-wow-delay="0.6s">Arch V-Ray</p>-->
                          <img class="imagens_vetoriais img-responsive" src="images/sunny.png"  alt="">
 
 
@@ -266,178 +424,20 @@
         </div>
 
     </div>
-
-    </div>
         
             <!-- /3D Modeling -->
 
-    <!--Vetorial-->
-
-    <div id="Vetorial" class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12 col-sm-12">
-                    <h2 class="section-heading wow fadeInLeft " data-wow-delay="0.3s">Vectorial Image</h2>
-                    <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.1s">
-                    <div class="clearfix"></div>
-                    <p class="lead wow fadeInLeft" data-wow-delay="0.5s">Can create any kind of vetorial images from logos to drawings, graphic images to use in motion graphics. Here are a few exemples that i made by request or academic purposes</p>
-
-                    <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.4s" src="images/ai.png" alt="">
-
-                    <br>
-                    <br>
-                    <br>
-                </div>
-
-
-                <div class="col-lg-4 col-md-4 col-sm-6 ">
-
-                    <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                         <img class="imagens_vetoriais img-responsive" src="images/cell.png"  alt="">
-
-                        <p class="center-title wow fadeIn" data-wow-delay="0.6s">Academic Logo</p>
-
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-4 col-md-4 col-sm-6 ">
-
-                    <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                         <img class="imagens_vetoriais img-responsive" src="images/Minnie_Monica.png"  alt="">
-
-                        <p class="center-title wow fadeIn" data-wow-delay="0.6s">Requested drawing</p>
-
-
-                    </div>
-
-                </div>
-
-                                <div class="col-lg-4 col-md-4 col-sm-6 ">
-
-                    <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                         <img class=" imagens_vetoriais img-responsive" src="images/roda.png"  alt="">
-
-                        <p class="center-title wow fadeIn" data-wow-delay="0.6s">Request Logo</p>
-
-
-                    </div>
-                                </div>
-                </div>
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-6 col-sm-12">
-
-                    <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                         <img class="img-responsive" src="images/mom_birdie.png" alt="">
-
-
-                        <p class="center-title wow fadeIn" data-wow-delay="0.6s">Requested theme</p>
-
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6 col-sm-12 ">
-
-                    <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                         <img class=" img-responsive" src="images/bd.png"  alt="">
-                        <p class="center-title wow fadeIn" data-wow-delay="0.6s">Illustration academic work</p>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-            </div>
-
-        <!-- /.Vetorial-->
-
-
-
-         <!--DESIGN-->
-
-    <div id="Design" class="content-section-a">
-
-            <div class="container">
-    
-                <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <h2 class="section-heading wow fadeInLeft " data-wow-delay="0.3s">Design</h2>
-                        <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.1s">
-                        <div class="clearfix"></div>
-                        <p class="lead wow fadeInLeft" data-wow-delay="0.5s">Information Architecture, design, usability and production of an app.
-                            <br> Some images of the final product.
-                        </p>
-    
-                        <img class="img-responsive imagens_index logo_images wow fadeInLeft" data-wow-delay="1.4s" src="images/ai.png" alt="">
-    
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-    
-    
-                    <div class="col-lg-4 col-md-4 col-sm-6 ">
-    
-                        <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                             <img class="imagens_vetoriais img-responsive" src="images/login.png"  alt="">
-    
-    
-    
-                        </div>
-    
-                    </div>
-    
-    
-                    <div class="col-lg-4 col-md-4 col-sm-6 ">
-    
-                        <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                             <img class="imagens_vetoriais img-responsive" src="images/menu.png"  alt="">
-    
-    
-    
-                        </div>
-    
-                    </div>
-    
-                                    <div class="col-lg-4 col-md-4 col-sm-6 ">
-    
-                        <div class=" wow fadeInRight" data-wow-delay="0.8s">
-                             <img class=" imagens_vetoriais img-responsive" src="images/chat.png"  alt="">
-    
-    
-    
-                        </div>
-                                    </div>
-                    </div>
-    
-                </div>
-    
-            <!-- /.DESIGN-->
-
-
-            <div id="MyWorks" class="content-section-b">
+            <!-- .My Works-->
+            <div id="MyWorks" class="content-section-a">
 
                 <div class="container">
         
                     <div class="row">
                         <div class="col-lg-12 col-sm-12">
-                            <h2 class="section-heading wow fadeInLeft " data-wow-delay="0.3s">My Works</h2>
-                            <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.1s">
+                            <h2 class="section-heading wow fadeInLeft " data-wow-delay="0.5s">My Works</h2>
+                            <hr class="section-heading-spacer wow fadeInLeft " data-wow-delay="0.8s">
                             <div class="clearfix"></div>
-                            <p class="lead wow fadeInLeft" data-wow-delay="0.5s">Creating a product model and using it in an example context</p>
+                            <p class="lead wow fadeInLeft whiteText" data-wow-delay="0.8s">Creating a product model and using it in an example context</p>
         
                             <img class="img-responsive wow fadeIn" data-wow-delay="1.4s" src="images/apresentacao.png" alt="">
         
@@ -448,6 +448,7 @@
                     </div>
                 </div>
             </div>
+        <!-- /.My Works-->
 
             <!-- /.FOOTER-->
 
@@ -488,7 +489,7 @@ $("a.toscroll").on('click',function(e) {
     var hash = url.substring(url.indexOf("#")+1);
     $('html, body').animate({
         scrollTop: $('#'+hash).offset().top
-    }, 500);
+    }, 1000);
     return false;
 });
             </script>
